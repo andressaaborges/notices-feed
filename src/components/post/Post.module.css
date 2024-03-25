@@ -1,0 +1,135 @@
+.post {
+    background: var(--gray-800);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.post header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.8125rem;
+}
+
+.post header p,
+.post header time {
+    color: var(--gray-400);
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.post+.post {
+    margin-top: 2rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author h3 {
+    color: var(--gray-100);
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content p {
+    color: var(--gray-300);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.content a {
+    text-decoration: none;
+    color: var(--green-300);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.content a:hover {
+    color: var(--green-500);
+}
+
+.content strong {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.commentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray-600);
+    padding: 1.5rem 0 0;
+}
+
+.commentForm h3 {
+    font-size: 1rem;
+    color: var(--gray-100);
+    line-height: 1.6;
+}
+
+.commentForm textarea {
+    width: 100%;
+    height: 6rem;
+    padding: 0.8125rem 1rem;
+    border-radius: 0.5rem;
+    line-height: 1.4;
+    background: var(--gray-900);
+    color: var(--gray-300);
+    resize: none;
+    border: 0;
+}
+
+.commentForm textarea::placeholder {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--white-100);
+}
+
+.commentForm textarea:hover {
+    border: 1px solid var(--green-300);
+}
+
+.commentForm footer {
+    visibility: hidden;
+    max-height: 0;
+}
+
+.commentForm:focus-within footer {
+    visibility: visible;
+    max-height: none;
+}
+
+.buttonSubmit[type=submit] {
+    width: 6.75rem;
+    background: var(--green-500);
+    color: var(--white);
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem 0.875rem;
+    cursor: pointer;
+    transition: color 0.1s, background-color 0.1s;
+    font-weight: bold;
+    line-height: 16px;
+    border: 0;
+}
+
+.buttonSubmit[type=submit]:not(:disabled):hover {
+    background: var(--green-300);
+}
+
+.buttonSubmit[type=submit]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
